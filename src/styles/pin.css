@@ -1,0 +1,17 @@
+/* Masonry via CSS columns: cards keep their natural image height */
+.masonry{column-count:5;column-gap:16px}
+@media(max-width:1400px){.masonry{column-count:4}}
+@media(max-width:1050px){.masonry{column-count:3}}
+@media(max-width:700px){.masonry{column-count:2;column-gap:8px}}
+.pin{break-inside:avoid;margin-bottom:16px}
+.pin-media{position:relative;border-radius:16px;overflow:hidden;background:var(--soft)}
+.pin-media img{width:100%;height:auto;transition:filter .25s,transform .35s}
+.pin-media:hover img{filter:brightness(.7);transform:scale(1.03)}
+.save-btn{background:var(--red);color:#fff;font-weight:700;padding:12px 18px;border-radius:24px;transition:background .2s}
+.save-btn:hover{background:var(--red-dark)}.save-btn.saved{background:var(--ink)}
+.pin-media .save-btn{position:absolute;top:12px;right:12px;opacity:0;transform:translateY(-6px);transition:opacity .2s,transform .2s,background .2s}
+.pin-media:hover .save-btn,.pin-media .save-btn:focus-visible{opacity:1;transform:none}
+@media(hover:none){.pin-media .save-btn{opacity:1;transform:none}}
+.pin-title{font-size:14px;font-weight:600;margin:8px 4px 2px}
+.pin-author{display:flex;align-items:center;gap:8px;margin:0 4px;font-size:13px;color:var(--muted)}
+.pin-author img{width:24px;height:24px;border-radius:50%}
